@@ -1,13 +1,18 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Poll Image Registry'
+description: 'Wait for a set of images to be available on their registries'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  consecutive-errors:
+    description: 'number of consecutive unexpected errors to allow before failing'
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
+    default: '3'
+  polling-rate-seconds:
+    description: 'the polling rate used to fetch image manifests in seconds'
+    required: true
+    default: '45'
+  images:
+    description: 'the list of images to wait for'
+    required: true
+    default: ""
 runs:
   using: 'node16'
   main: 'dist/index.js'
