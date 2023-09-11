@@ -28,7 +28,7 @@
     "docker-registry-client": "^3.4.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.36.1",
+    "@vercel/ncc": "^0.38.0",
     "eslint": "^8.49.0"
   }
 }
