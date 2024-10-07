@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/actions/action-poll-image-registry#readme",
   "dependencies": {
-    "@actions/core": "^1.10.1",
+    "@actions/core": "^1.11.1",
     "docker-registry-client": "^3.4.0"
   },
   "devDependencies": {
